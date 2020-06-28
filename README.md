@@ -94,6 +94,6 @@ book sm
 
 ### 构建流程图
 
-![构建流程图](/Users/nuxse/code/gitbook-template/assets/构建流程图.png)
+![构建流程图](./assets/构建流程图.png)
 
 
