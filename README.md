@@ -96,4 +96,14 @@ book sm
 
 ![构建流程图](./assets/构建流程图.png)
 
+Usage
 
+1. 采用模板形式生成项目
+
+2. 克隆到开发环境之后 安装gitbook依赖
+
+   ​	1) gitbook-cli 需要提前安装好
+
+   ​	2) 安装依赖 gitbook install   也可以直接软链应该安装的外部node_modules
+
+3. 修改自动构建配置
