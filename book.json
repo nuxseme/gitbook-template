@@ -6,7 +6,6 @@
     "gitbook": "3.2.3",
     "outputfile": "SUMMARY.md",
     "catalog": "all",
-    "ignores": ["node_modules","_book"],
     "unchanged": [],
     "sortedBy": "-",
     "disableTitleFormatting": false,
