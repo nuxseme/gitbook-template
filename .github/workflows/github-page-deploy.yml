@@ -9,6 +9,8 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x]
+    env:
+      GH_REP: xxx
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -18,8 +20,7 @@ jobs:
           cache: 'npm'
       - name: build
         env:
-          GH_REP: xxx
-          GH_REF: github.com/nuxseme/$GH_REP.git
+          GH_REF: github.com/nuxseme/${{ env.GH_REP }}.git
         run: |
           node -v
           npm install -g n
@@ -27,11 +28,11 @@ jobs:
           npm install -g gitbook-summary
           gitbook -v
           gitbook install
-          gitbook build
           book sm
+          gitbook build
           cd ./_book
           ls  -al
-          curl -u nuxse:${{ secrets.ACCESS_TOKEN }} https://api.github.com/user/repos -d '{ "name": "$GH_REP" }'
+          curl -u nuxse:${{ secrets.ACCESS_TOKEN }} https://api.github.com/user/repos -d '{ "name": "${{ env.GH_REP }}" }'
           git init
           git config --global user.name "nuxseme"
           git config --global user.email "nuxseme@gmail.com"
