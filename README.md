@@ -105,4 +105,6 @@ Usage
 
    ​	2) 安装依赖 gitbook install   也可以直接软链应该安装的外部node_modules
 
-3. 修改自动构建配置
+3. 修改自动构建配置 （Travis已废弃，改为github  action) 需要在.github.com/workflows下修改GH_REP 例如xxx-gitbook
+4. 当前项目需要配置ACCESS_TOKEN
+5. cd项目需要配置page访问分支
